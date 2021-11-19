@@ -2,7 +2,8 @@ name: Deploy To Test Environment
 
 on:
   push:
-    branches: [ "main" ]
+    tags:
+      - "v*"
 
 jobs:
   build:
@@ -40,5 +41,5 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_TEST_DATA }}
         with:
           args: |
-            find deploy/deploy-to-test.yml -type f -exec sed -i 's/VERSION/0.0.${{github.run_number}}/g' {} \;
-            ls deploy/deploy-to-test.yml | xargs -I {} kubectl apply -f {}
+            find deploy/deploy-to-prod.yml -type f -exec sed -i 's/VERSION/0.0.${{github.run_number}}/g' {} \;
+            ls deploy/deploy-to-prod.yml | xargs -I {} kubectl apply -f {}

@@ -4,7 +4,7 @@ metadata:
   labels:
     app: dongtai-docs
   name: dongtai-docs
-  namespace: iast-test
+  namespace: iast-prod
 spec:
   selector:
     matchLabels:
