@@ -19,6 +19,7 @@
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211009.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211022.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211105.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211120-release-1.1.1.sql
 
     # 通过 MySQL 指令执行数据库文件更新
     mysql -u root -p <passwor> -D <database> < /docker-entrypoint-initdb.d/db.sql
@@ -64,10 +65,10 @@
 
       docker exec -it dongtai-iast_dongtai-mysql_1 /bin/bash
 
-- 进入 :blue:`/docker-entrypoint-initdb.d` 目录, 下载数据库更新文件: :blue:`update-20211105.sql`
+- 进入 :blue:`/docker-entrypoint-initdb.d` 目录, 下载数据库更新文件: :blue:`update-20211120-release-1.1.1.sql`
 
   .. code-block:: bash
 
       cd /docker-entrypoint-initdb.d
-      mysql -uroot -p"dongtai-iast" -D dongtai_webapi < /docker-entrypoint-initdb.d/update-20211022.sql
+      mysql -uroot -p"dongtai-iast" -D dongtai_webapi < /docker-entrypoint-initdb.d/update-20211120-release-1.1.1.sql
 
