@@ -21,7 +21,7 @@ Setup
       cd deploy/docker-compose/
 
       # Deploy
-      ./install.sh
+      ./dtctl install -v 1.0.5
       
 .. tip:: **Custom Configuration**
 
@@ -31,10 +31,33 @@ Setup
   
   .. code-block:: bash
 
-     ./install.sh  -s mysql
+      ./dtctl install -v 1.0.5 -s mysql
 
   - s: skip specified component, optional: ``mysql`` ``redis`` ``mysql,redis``, default: don't skip
-  
+  - v: the version you want to install
+
+upgrade
++++++++++
+
+.. tabs:: **upgrade**
+
+   .. code-block:: bash
+
+      ./dtctl upgrade -f 1.0.5 -t 1.1.2
+      
+      # f: from version t: to version
+
+uninstall
++++++++++
+
+.. tabs:: **uninstall**
+
+   .. code-block:: bash
+
+      ./dtctl rm -d
+
+      # d : remove server and data
+
 
 Kubernetes
 ---------------
