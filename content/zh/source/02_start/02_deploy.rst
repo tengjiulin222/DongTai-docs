@@ -23,7 +23,7 @@ Docker Compose
       cd deploy/docker-compose/
 
       # 部署
-      ./install.sh
+      ./dtctl install -v 1.0.5
       
 .. tip:: **自定义配置**
 
@@ -33,10 +33,34 @@ Docker Compose
   
   .. code-block:: bash
 
-     ./install.sh  -s mysql
+     ./dtctl install -v 1.0.5 -s mysql
 
   - s: 跳过的资源(skip), 可选: ``mysql`` ``redis`` ``mysql,redis``, 默认：不跳过
-  
+  - v: 需要被安装的版本
+
+
+升级设置
++++++++++
+
+.. tabs:: **升级**
+
+   .. code-block:: bash
+
+      ./dtctl upgrade -f 1.0.5 -t 1.1.2
+      
+      # f: from version t: to version
+
+卸载
++++++++++
+
+.. tabs:: **卸载**
+
+   .. code-block:: bash
+
+      ./dtctl rm -d
+
+      # d : 改选项会让数据和服务一起被删除
+
 
 Kubernetes
 ---------------
