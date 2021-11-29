@@ -21,30 +21,12 @@ Server
 
   建议至少 4 Core 8 GB, :doc:`请参考部署指南 <../02_start/02_deploy>` 中各部署方式之系统需求
 
-- **dongtai-openapi 从哪里获取？**
-
-  .. code-block:: bash
-      
-      #执行指令
-      sudo docker ps -a | grep dongtai-iast_dongtai-openapi_1
-      
-      #结果，port 为 8000
-      #4d12c7952f5d   dongtai/dongtai-openapi:1.0.6   "/usr/local/bin/uwsg…"   7 days ago   Up 7 days               0.0.0.0:8000->8000/tcp, :::8000->8000/tcp            dongtai-iast_dongtai-openapi_1
 
 - **如何部署多个openAPI服务节点？(基于docker-compose方式)**
-
-  多起几个 openapi 服务，端口映射出来，前面挂一下 nginx，配置负载均衡
-
-- **数据库验证码无法显示?**
-
-  .. code-block:: bash
-
-      #从 build_with_docker_compose.sh 中移除：
-      volumes:
-      ./data:/var/lib/mysql
-      
-      #执行
-      run build_with_docker_compose.sh
+  
+  使用以下命令将openapi扩容到number个
+  
+  sudo docker-compose -p dongtai-iast up -d --scale dongtai-openapi=<number> --no-recreate
 
 - **Centos7 部署报chown mod /var/lib/mysql permission denied，如何解决?**
 
