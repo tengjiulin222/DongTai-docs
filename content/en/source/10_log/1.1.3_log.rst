@@ -1,0 +1,105 @@
+v1.1.3 Release Note
+=======================
+Release Date: 2021.12.03
+
+**DongTai-openapi**
+------------------------
+**Function**
+
+- Projects are now sorted according to the time of obtaining component and vulnerability information
+
+
+**DongTai-engine**
+------------------------
+
+- Close ISSUE #92 (Increase the judgment of whether prompt vulnerabilit… by @exexute in #93
+- Close ISSUE #94 ( DongTai-Engine ) by @exexute in #95
+- Closes #96 (dependency dongtai-core) by @exexute in #97
+- Closes #82 (add request param/data check) by @exexute in #98
+- Update deploy_test.yml by @hardy4yooz in #99
+
+
+**DongTai-web**
+------------------------
+**Function**
+
+- Add AboutDongTai page
+- Add policy template editing function
+
+**Improve**
+
+- Automatically clear the verification code in case of login error
+- Add advanced configuration function in project configuration
+- Add component path
+
+**Fix**
+
+- Adjusted UI details and fixed some detail bugs
+
+
+**DongTai-webapi**
+------------------------
+
+**Function**
+
+- Projects are now sorted according to the time of obtaining component and vulnerability information
+- Added scan template policy management
+- Increase the vulnerability active verification switch (including global and project level)
+
+**Improve**
+
+- Component information now adds component path
+- Improved the original paging logic
+- Improved the original data verification to adapt to the boundary value
+- The agent name now gives priority to the alias when binding the agent
+
+**Fix**
+
+- Fix the error that may be caused by agentid when the project is created
+- Fixed a non-atomic error when the project was created
+- Fix permission errors when deleting data
+
+**Dongtai-Base-Image**
+------------------------
+**Function**
+
+- Increase the vulnerability active verification switch (including global and project level)
+
+**Improve**
+
+- Add strategy
+- Add sensitive_info rule 
+
+
+**DongTai-agent-java**
+------------------------
+- Fixes #153 (When using resttemplate to customize the header, some fields will not be loaded, such as the host header).
+- Fixes #159 (Third-party dependent component analysis is changed to asynchronous tasks).
+- Add httpclient for Vulnerability full link tracking#157.
+- Add propagator rules for Path Traversal#164.
+
+**DongTai-agent-python**
+------------------------
+**FEATURES**
+
+- Use the environment variable ENGINE_NAME to customize agent name
+- Use the environment variable LOG_PATH to customize log file path
+- Add exec hook and policy rule to detect code execution vulnerabilities
+
+**ENHANCEMENTS**
+
+- Code refactoring: Add scope to prevent recursive execution of the agent's own code
+- Code refactoring: Add runtime settings and replace the configuration that uses global variables
+- Code refactoring: Add request context to store tainted data
+- Performance improvements: Tainted data processing optimization
+- Performance improvements: Remove unnecessary list policy rules
+
+**BUGFIXES**
+
+- Fix eval exceptions with contextual variables
+
+
+
+
+
+
