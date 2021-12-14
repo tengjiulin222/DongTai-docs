@@ -22,7 +22,7 @@ copyright = '2021, DongTai'
 author = 'DongTai'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1.0'
+release = 'main'
 
 
 # -- General configuration ---------------------------------------------------
@@ -58,12 +58,12 @@ html_theme_options = {
         },
         {
             "name": "中文",
-            "url": "https://doc2.dongtai.io/zh",
+            "url": "https://doc.dongtai.io/zh",
             "icon": "fas fa-globe-asia",
         },
         {
             "name": "英文",
-            "url": "https://doc2.dongtai.io/en",
+            "url": "https://doc.dongtai.io/en",
             "icon": "fas fa-globe-europe",
         },
     ],"use_edit_page_button": True,
@@ -74,7 +74,7 @@ html_context = {
     "github_url": "https://github.com", # or your GitHub Enterprise interprise
     "github_user": "HXSecurity",
     "github_repo": "DongTai-docs",
-    "github_version": "v1.1.0",
+    "github_version": "main",
     "doc_path": "content/zh/source/",
 }
 
