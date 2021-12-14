@@ -75,7 +75,7 @@ html_context = {
     "github_user": "HXSecurity",
     "github_repo": "DongTai-docs",
     "github_version": "main",
-    "doc_path": "content/zh/source/",
+    "doc_path": "content/en/source/",
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
