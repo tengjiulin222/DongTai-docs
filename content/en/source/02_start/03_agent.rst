@@ -176,19 +176,37 @@ Requirements
 
 - Ensure the service of installing DongTai Agent meet the requirement as below:
 
-  - Operating system: Windows/Linux/Unix
+  - Operating system: Windows/Linux/macOS
 
-  - Python version：3.3 and above
+  - Python version: 3.6 and above
 
-  - Interpreter：CPython
+  - Interpreter: CPython
 
-  - Middleware：uWSGI
+  - Middleware: uWSGI
 
-  - Web Framework：Django
+  - Compiling Dependencies:
 
-  - Web Service：Django REST Framework
+    - gcc (Linux/macOS)
 
-  - Python Dependencies：psutil >= 5.8.0，requests >= 2.25.1，pip >= 19.2.3
+    - make (Linux/macOS)
+
+    - cmake
+
+    - Visual Studio (Windows)
+
+  - Web Framework
+
+    - Django: 3.0 - 3.2
+
+    - Flask: 1.0 - 1.2
+
+  - Python Dependencies
+
+    - psutil >= 5.8.0
+
+    - requests >= 2.25.1
+
+    - pip >= 19.2.3
 
 Install Agent
 +++++++++++++++++++++++++++++++++
