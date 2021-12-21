@@ -173,19 +173,37 @@ Python Agent
 
 - 确认 Agent 端所在环境在我们的支持列表中：
 
-  - 作业系统: Windows/Linux/Unix
+  - 操作系统: Windows/Linux/macOS
 
-  - Python 版本：3.3+
+  - Python 版本: 3.6 及以上
 
-  - 解释器：CPython
+  - 解释器: CPython
 
-  - 中间件：uWSGI
+  - 中间件: uWSGI
 
-  - Web 框架：Django
+  - 编译依赖
 
-  - Web Service：Django REST Framework
+    - gcc (Linux/macOS)
 
-  - Python 依赖包：psutil >= 5.8.0，requests >= 2.25.1，pip >= 19.2.3
+    - make (Linux/macOS)
+
+    - cmake
+
+    - Visual Studio (Windows)
+
+  - Web 框架
+
+    - Django: 3.0 - 3.2
+
+    - Flask: 1.0 - 1.2
+
+  - Python 依赖包
+
+    - psutil >= 5.8.0
+
+    - requests >= 2.25.1
+
+    - pip >= 19.2.3
 
 安装 Agent 
 +++++++++++++++++++++++++++++++++
