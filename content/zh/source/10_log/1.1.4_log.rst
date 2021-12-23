@@ -26,7 +26,7 @@ v1.1.4 版本升级日志
 ------------------------
 **修复**
 
-- 修复了项目详情页面弱网条件下 `id` 无法获取的 bug
+- 修复了项目详情页面弱网条件下 ``id`` 无法获取的 bug
 
 
 
@@ -38,11 +38,11 @@ v1.1.4 版本升级日志
 
 **修复**
 
-- 修复了 `container` 为 `None` 时的 `VulDetail`， `NoneType` 导致的问题
-- 修复了 `VulSummary` 不适当的 SQL 查询导致 API 超时的问题
+- 修复了 ``container`` 为 ``None`` 时的 ``VulDetail``， ``NoneType`` 导致的问题
+- 修复了 ``VulSummary`` 不适当的 SQL 查询导致 API 超时的问题
 - 修复返回时缺失扫描策略名称的的问题
-- 修正 `/api/v1/vulns` 局部变量 `result` 赋值前引用的问题
-- 修正 `/api/v1/sensitive_info_rule/` 字段没有范围指示
+- 修正 ``/api/v1/vulns`` 局部变量 ``result`` 赋值前引用的问题
+- 修正 ``/api/v1/sensitive_info_rule/`` 字段没有范围指示
 
 
 **Dongtai-Base-Image**
@@ -61,20 +61,20 @@ v1.1.4 版本升级日志
 ------------------------
 **功能**
 
-- 增加 `funchook` 用于 Python C API 相关的函数/方法
-- 增加 `fstring` 方法改写
-- 增加 `str/bytes/bytearray cformat(%)` 方法改写
-- 增加 `str.__new__`, `bytes.__new__`, `bytearray.__init__` 方法改写
-- 增加 `pickle.load`, `pickle.loads` 策略规则以检测不安全的反序列化漏洞
+- 增加 ``funchook`` 用于 Python C API 相关的函数/方法
+- 增加 ``fstring`` 方法改写
+- 增加 ``str/bytes/bytearray cformat(%)`` 方法改写
+- 增加 ``str.__new__``, ``bytes.__new__``, ``bytearray.__init__`` 方法改写
+- 增加 ``pickle.load``, ``pickle.loads`` 策略规则以检测不安全的反序列化漏洞
 - 为 HTML 转义添加一些过滤规则
 
 **修复**
 
-- 修复 yaml.load 以及 yaml.load_all 危险参数检查
+- 修复 ``yaml.load`` 以及 ``yaml.load_all`` 危险参数检查
 
 **变更**
 
-- 修改 `yaml.load`, `yaml.unsafe_load` 策略类型为不安全的反序列化
+- 修改 ``yaml.load``, ``yaml.unsafe_load`` 策略类型为不安全的反序列化
 - 对于包含多个危险方法的请求, 在检测到第一个危险方法后不再停止跟踪
 
 **构建**
