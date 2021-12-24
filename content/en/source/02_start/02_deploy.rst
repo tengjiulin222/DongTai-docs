@@ -37,7 +37,7 @@ Setup
   
   .. code-block:: bash
 
-      ./dtctl install -v 1.0.5 -s mysql
+      ./dtctl install -v 1.1.4 -s mysql
 
   - s: skip specified component, optional: ``mysql`` ``redis`` ``mysql,redis``, default: don't skip
   - v: the version you want to install
@@ -53,7 +53,7 @@ upgrade
 
       # upgrade to the latest version
 
-      ./dtctl upgrade -t 1.1.2
+      ./dtctl upgrade -t 1.1.4
       
       # f: from version t: to version
 

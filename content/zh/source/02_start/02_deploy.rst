@@ -28,7 +28,7 @@ Docker Compose
       ./dtctl install
 
       # 部署执行版本
-      
+
       ./dtctl install -v 1.1.4
       
 .. tip:: **自定义配置**
@@ -39,7 +39,7 @@ Docker Compose
   
   .. code-block:: bash
 
-     ./dtctl install -v 1.0.5 -s mysql
+     ./dtctl install -v 1.1.4 -s mysql
 
   - s: 跳过的资源(skip), 可选: ``mysql`` ``redis`` ``mysql,redis``, 默认：不跳过
   - v: 需要被安装的版本
@@ -56,7 +56,7 @@ Docker Compose
 
       # upgrade to the latest version
 
-      ./dtctl upgrade -t 1.1.2
+      ./dtctl upgrade -t 1.1.4
       
       # t: to version
 
