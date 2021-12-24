@@ -4,6 +4,7 @@ Docker Compose
 -------------------
 Requirements
 +++++++++++++++++
+- 8C16G
 - Docker
 - docker-compose
 
@@ -20,8 +21,13 @@ Setup
       git clone https://github.com/HXSecurity/DongTai.git
       cd deploy/docker-compose/
 
-      # Deploy
-      ./dtctl install -v 1.0.5
+      # Deploy latest version
+
+      ./dtctl install
+
+      # Deploy specified version
+
+      ./dtctl install -v 1.1.4
       
 .. tip:: **Custom Configuration**
 
@@ -43,7 +49,11 @@ upgrade
 
    .. code-block:: bash
 
-      ./dtctl upgrade -f 1.0.5 -t 1.1.2
+      ./dtctl upgrade
+
+      # upgrade to the latest version
+
+      ./dtctl upgrade -t 1.1.2
       
       # f: from version t: to version
 
