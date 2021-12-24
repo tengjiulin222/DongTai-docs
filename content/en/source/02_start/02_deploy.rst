@@ -4,6 +4,7 @@ Docker Compose
 -------------------
 Requirements
 +++++++++++++++++
+- 8C16G
 - Docker
 - docker-compose
 
@@ -42,8 +43,12 @@ upgrade
 .. tabs:: **upgrade**
 
    .. code-block:: bash
+   
+      ./dtctl upgrade
 
-      ./dtctl upgrade -f 1.0.5 -t 1.1.2
+      # upgrade to the latest version
+
+      ./dtctl upgrade -t 1.1.2
       
       # f: from version t: to version
 
