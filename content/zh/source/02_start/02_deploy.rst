@@ -27,7 +27,7 @@ Docker Compose
 
       ./dtctl install
 
-      # 部署执行版本
+      # 部署指定版本
 
       ./dtctl install -v 1.1.4
       
