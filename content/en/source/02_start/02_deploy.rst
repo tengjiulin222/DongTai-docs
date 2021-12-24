@@ -21,8 +21,13 @@ Setup
       git clone https://github.com/HXSecurity/DongTai.git
       cd deploy/docker-compose/
 
-      # Deploy
-      ./dtctl install -v 1.0.5
+      # Deploy latest version
+
+      ./dtctl install
+
+      # Deploy specified version
+
+      ./dtctl install -v 1.1.4
       
 .. tip:: **Custom Configuration**
 
@@ -43,7 +48,7 @@ upgrade
 .. tabs:: **upgrade**
 
    .. code-block:: bash
-   
+
       ./dtctl upgrade
 
       # upgrade to the latest version

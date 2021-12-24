@@ -23,8 +23,13 @@ Docker Compose
       git clone https://github.com/HXSecurity/DongTai.git
       cd deploy/docker-compose/
 
-      # 部署
-      ./dtctl install -v 1.0.5
+      # 部署最新版本
+
+      ./dtctl install
+
+      # 部署执行版本
+      
+      ./dtctl install -v 1.1.4
       
 .. tip:: **自定义配置**
 
