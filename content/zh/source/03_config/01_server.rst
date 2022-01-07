@@ -22,11 +22,10 @@
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211218-release-1.1.4.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211230-release-1.2.0.sql
 
-    # 通过 MySQL 指令执行数据库文件更新
-    mysql -u root -p <passwor> -D <database> < /docker-entrypoint-initdb.d/db.sql
-    mysql -u root -p <passwor> -D <database> < /docker-entrypoint-initdb.d/rule.sql
-    mysql -u root -p <passwor> -D <database> < /docker-entrypoint-initdb.d/sca.sql
-    mysql -u root -p <passwor> -D <database> < /docker-entrypoint-initdb.d/update-*.sql
+    # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
+    cat *.sql | mysql -uroot -p --default-character-set=utf8mb4 dongtai_webapi
+    
+
 
 
 升级洞态 IAST Server 端
