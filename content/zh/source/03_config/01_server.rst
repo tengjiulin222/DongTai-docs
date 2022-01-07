@@ -9,16 +9,13 @@
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/db.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210401.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210702.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210717.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210731.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210817.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210831.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210918.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211009.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211022.sql
-    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211105.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210731-release-1.0.0.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210817-release-1.0.2.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210831-release-1.0.3.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210918-release-1.0.4.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211009-release-1.0.5.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211022-release-1.0.6.sql
+    wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211105-release-1.1.0.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211120-release-1.1.1.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211123-release-1.1.2.sql
     wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211203-release-1.1.3.sql
