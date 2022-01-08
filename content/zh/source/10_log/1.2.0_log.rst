@@ -1,0 +1,68 @@
+v1.2.0 版本升级日志
+=====================
+发行日: 2022.01.04
+
+**Contributor**
+^^^^^^^^^^^^^^^
+
+DongTai IAST v1.2.0 版本开发中，新增 3 位开发者为 DongTai
+社区提交了有效代码，分别是：
+
+-  ``SpenserCai``
+-  ``caoshutao``
+-  ``hzmciast``
+
+本次社区贡献主要包括：
+
+- 新增项目 DongTai-SDK-Python，通过 SDK 访问 DongTai API，避免直接操作 API 接口
+- 修复 Java Agent 热卸载失败的 Bug
+- 增加企业微信告警功能
+
+**Commiter**
+^^^^^^^^^^^^
+
+新增 1 位优质贡献者
+``SpenserCai``，贡献了优质的手机号检测规则，该正则已作为默认正则使用：
+
+.. code:: python
+
+   (?<!\d)(86|086|(?<!\d))[1][345789][0-9]{9}(?!\d)
+
+**DongTai-IAST**
+^^^^^^^^^^^^^^^^
+
+-  支持企业微信告警 ``@hzmciast``
+-  增加自定义规则支持批量启用、批量禁用、批量删除
+-  增加组件导出的功能
+
+**DongTai-agent-java**
+^^^^^^^^^^^^^^^^^^^^^^
+
+-  热卸载功能的 BUG ``@caoshutao``
+-  修复 SCA 数据采集 BUG，优化 iast-inject
+   模块、减少内存占用、提高性能速度
+
+**DongTai-agent-python**
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  支持检测 NoSql 注入漏洞、LDAP 注入漏洞 
+
+**DongTai-sdk-python**
+^^^^^^^^^^^^^^^^^^^^^^
+
+-  新增项目 DongTai-SDK-Python，通过 SDK 访问 DongTai API，避免直接操作
+   API 接口 ``@SpenserCai``
+
+**DongTai-agent-php**
+^^^^^^^^^^^^^^^^^^^^^
+
+-  支持 PHP 7.\* 版本
+-  支持检测命令执行的漏洞
+
+**DongTai-agent-go**
+^^^^^^^^^^^^^^^^^^^^
+
+-  开源 Go Agent 项目
+-  支持原生 ``net/http``\ 、\ ``gin``
+   框架、\ ``julienschmidt/httprouter`` 框架
+-  支持检测原生 ``database/sql`` 包及 Gorm 框架导致的 SQL 注入
