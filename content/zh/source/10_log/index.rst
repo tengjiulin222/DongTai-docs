@@ -4,12 +4,11 @@
 .. toctree::
    :maxdepth: 2
 
-   01_log
    1.3.0_log.rst
    1.2.0_log.rst
    1.1.4_log.rst
    1.1.3_log.rst
-
+   1.1.0_log.rst
 
 
 
