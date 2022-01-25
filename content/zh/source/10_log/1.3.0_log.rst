@@ -1,0 +1,27 @@
+v1.3.0 版本升级日志
+=====================
+发行日: 2022.01.18
+
+
+**DongTai-IAST**
+^^^^^^^^^^^^^^^^
+
+- SCA 支持使用本地 API、SAAS API（默认）进行组件漏洞检测，提升组件漏洞检测能力。
+
+**DongTai-agent-java**
+^^^^^^^^^^^^^^^^^^^^^^
+
+- 新增策略：JNDI 注入
+.. image:: ../_static/10_log/v1.3.0/01.png
+  :alt: concept_arch
+  :align: center
+
+- 同步更新至策略管理
+.. image:: ../_static/10_log/v1.3.0/02.png
+  :alt: concept_arch
+  :align: center
+
+- 对应的 hook 规则
+.. image:: ../_static/10_log/v1.3.0/03.png
+  :alt: concept_arch
+  :align: center
