@@ -21,4 +21,5 @@ DongTai IAST 文档
    08_bp/index
    09_faq/index
    10_log/index
+   11_res/index
    
