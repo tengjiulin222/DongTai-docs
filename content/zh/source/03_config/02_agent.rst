@@ -1,95 +1,51 @@
-Agent 配置
-==================
-参数表
+Agent Configuration
+========================
+Parameter table
 +++++++++++++++++
 
-- **dongtai.app.name**
+- **debug**
 
 .. list-table::
    :widths: 4 20
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.name=<application name>`` 
-   * - 参数类型
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Ddebug=<true or false>`` and then restart the application service
+   * - Parameter Type
+     - Boolean
+   * - Source
+     - Command line argument
+   * - Variables
+     - ``true`` ｜ ``false``
+   * - Default
+     - false
+   * - Description
+     - Once the debug mode is enabled, it will automatically check the scan engine is exist in the local temp folder, the scan engine will be loaded and started
+
+- **project.name**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Dproject.name=<application name>`` and then restart the application service
+   * - Parameter Type
      - String
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 格式：中文、英文字母大小写、数字、@等组合，长度20以内，名称保证唯一
-   * - 默认值
+   * - Source
+     - Settings file
+   * - Variables
+     - Less than 20 characters which included: Chinese characters, uppercase/lowercase letter, digit and symbol
+   * - Default
      - Demo Project
-   * - 参数说明
-     - 项目名称
-
-- **dongtai.app.create**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-   
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.create=<true or false>`` 
-   * - 参数类型
-     - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - ``true`` ｜ ``false``
-   * - 默认值
-     - false
-   * - 参数说明
-     - 是否在管理服务器上自动创建项目
-
-- **dongtai.app.version**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.version=<v1.1.0>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 应用版本号
-   * - 默认值
-     - v1.0
-   * - 参数说明
-     - 当配置该参数启动时，会自动创建项目及版本
-     
-- **dongtai.debug**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.debug=<true or false>`` 
-   * - 参数类型
-     - Boolean
-   * - 来源
-     - 命令行参数
-   * - 可选参数
-     - ``true`` ｜ ``false``
-   * - 默认值
-     - false
-   * - 参数说明
-     - 开启后检测本地临时目录中是否存在核心检测引擎存在，加载本地检测引擎并启动
+   * - Description
+     - Application name
 
 - **iast.mode**
 
@@ -98,20 +54,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.mode=<hunter or normal>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.mode=<hunter or normal>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
      - ``hunter`` ｜ ``normal``
-   * - 默认值
+   * - Default
      - normal
-   * - 参数说明
-     - 漏洞检验模式，hunter模式漏洞多、误报率高，normal模式漏洞相对少、误报率低
+   * - Description
+     - Hunter mode can coverage more vulnerabilities detection but it has a high false-positive rate and normal mode is vice versa.
 
 - **iast.server.mode**
 
@@ -120,20 +76,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.server.mode=<local or remote>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.server.mode=<local or remote>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
      - ``local`` ｜ ``remote``
-   * - 默认值
+   * - Default
      - remote
-   * - 参数说明
-     - local模式支持单漏洞验证、项目漏洞批量验证、POST请求包展示、污点位置及污点值展示等功能
+   * - Description
+     - Local mode support single and multiple selected vulnerabilities verify. It also can show POST Requests, Stain Source, Taint Source and etc
 
 - **iast.proxy.enable**
 
@@ -142,20 +98,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.proxy.enable=<true or false>`` 
-   * - 参数类型
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.proxy.enable=<true or false>`` and then restart the application service
+   * - Parameter Type
      - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
+   * - Source
+     - Settings file
+   * - Variables
      - ``true`` ｜ ``false``
-   * - 默认值
+   * - Default
      - false
-   * - 参数说明
-     - HTTP代理模式是否启用
+   * - Description
+     - Enable/Disable HTTP proxy setting
 
 - **iast.proxy.host**
 
@@ -164,20 +120,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.proxy.host=<ip>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 代理的域名 (IP)
-   * - 默认值
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.proxy.host=<ip>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
+     - IP address format
+   * - Default
      - null
-   * - 参数说明
-     - HTTP 代理的域名 (IP)
+   * - Description
+     - HTTP proxy server IP address
 
 - **iast.proxy.port**
 
@@ -186,20 +142,64 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.proxy.port=<port>`` 
-   * - 参数类型
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.proxy.port=<port>`` and then restart the application service
+   * - Parameter Type
      - String
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 端口 (1 to 65535)
-   * - 默认值
+   * - Source
+     - Settings file
+   * - Variables
+     - Port format, ranging from 1 to 65535
+   * - Default
      - 80
-   * - 参数说明
-     - HTTP 代理的端口
+   * - Description
+     - HTTP proxy server port
+
+- **iast.service.report.interval**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.service.report.interval=<60000>`` and then restart the application service
+   * - Parameter Type
+     - Integer
+   * - Source
+     - Settings file
+   * - Variables
+     - Any integer numeric
+   * - Default
+     - 60000
+   * - Description
+     - Time interval setting of sending report. Unit: ms 
+
+- **iast.service.relay.interval**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.service.replay.interval=<300000>`` and then restart the application service
+   * - Parameter Type
+     - Integer
+   * - Source
+     - Settings file
+   * - Variables
+     - Any integer numeric
+   * - Default
+     - 30000
+   * - Description
+     - Time interval setting of relay. Unit: ms 
 
 - **iast.engine.delay.time**
 
@@ -208,20 +208,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.engine.delay.time=<10>`` 
-   * - 参数类型
-     - 整型数字
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 任意整型数字
-   * - 默认值
-     - 0
-   * - 参数说明
-     - 延迟启动功能，单位：秒
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.engine.delay.time=<10>`` and then restart the application service
+   * - Parameter Type
+     - Integer
+   * - Source
+     - Settings file
+   * - Variables
+     - Any integer numeric
+   * - Default
+     - 10
+   * - Description
+     - Automatic (Delayed Start) agent service. Unit: sec
 
 - **iast.dump.class.enable**
 
@@ -230,20 +230,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.dump.class.enable=<true or false>`` 
-   * - 参数类型
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.proxy.enable=<true or false>`` and then restart the application service
+   * - Parameter Type
      - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
+   * - Source
+     - Settings file
+   * - Variables
      - ``true`` ｜ ``false``
-   * - 默认值
+   * - Default
      - false
-   * - 参数说明
-     - 是否 dump 修改后的字节码
+   * - Description
+     - Enable/Disable dump modified
 
 - **iast.dump.class.path**
 
@@ -252,20 +252,20 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.dump.class.path=</tmp/iast-class-dump/>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 任意有权限路径
-   * - 默认值
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.dump.class.path=</tmp/iast-class-dump/>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
+     - Any path with access permission granted
+   * - Default
      - /tmp/iast-class-dump/
-   * - 参数说明
-     - dump 字节码的路径
+   * - Description
+     - Dump class path
 
 - **iast.server.url**
 
@@ -274,19 +274,19 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.server.url=<https://openapi.iast.io>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - URL 格式
-   * - 默认值
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.server.url=<https://openapi.iast.io>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
+     - URL Format
+   * - Default
      - https://openapi.iast.io
-   * - 参数说明
+   * - Description
      - Server URL
 
 - **iast.allhook.enable**
@@ -296,20 +296,64 @@ Agent 配置
    :header-rows: 1
    :width: 100%
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Diast.allhook.enable=<true or false>`` 
-   * - 参数类型
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Diast.allhook.enable=<true or false>`` and then restart the application service
+   * - Parameter Type
      - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
+   * - Source
+     - Settings file
+   * - Variables
      - ``true`` ｜ ``false``
-   * - 默认值
+   * - Default
      - false
-   * - 参数说明
-     - 开启全量HOOK模式
+   * - Description
+     - Enable/Disable all hook reference
+
+- **project.create**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Dproject.create=<true or false>`` and then restart the application service
+   * - Parameter Type
+     - Boolean
+   * - Source
+     - Settings file
+   * - Variables
+     - ``true`` ｜ ``false``
+   * - Default
+     - false
+   * - Description
+     - Enable/Disable to auto create application.
+
+- **project.version**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+   
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Dproject.version=<v1.1.0>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
+     - Application version
+   * - Default
+     - v1.0
+   * - Description
+     - Enable to auto create application version.
 
 - **response.length**
 
@@ -317,124 +361,58 @@ Agent 配置
    :widths: 4 20
    :header-rows: 1
    :width: 100%
+   
+   * - Attribute
+     - Value
+   * - Activation
+     - Add ``-Dresponse.length=<1000>`` and then restart the application service
+   * - Parameter Type
+     - String
+   * - Source
+     - Settings file
+   * - Variables
+     - Integer > 0
+   * - Default
+     - None
+   * - Description
+     - Modify the response length from HTTP collected by Agent.
 
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Dresponse.length=<1000>`` 
-   * - 参数类型
-     - 整形数字
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 大于0的整形数字
-   * - 默认值
-     - 无
-   * - 参数说明
-     - 当配置该参数启动时，会改变 agent 获取应用的 http 请求响应体的长度
-     
-- **dongtai.log**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log=<true or false>`` 
-   * - 参数类型
-     - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - ``true`` ｜ ``false``
-   * - 默认值
-     - true
-   * - 参数说明
-     - 是否把日志输出到本地文件
-
-- **dongtai.log.path**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log.path=/tmp`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 任意有读写权限的目录
-   * - 默认值
-     - agent.jar 当前目录
-   * - 参数说明
-     - 指定日志文件所在目录
-     
-- **dongtai.log.level**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log.level=<1000>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - info,debug
-   * - 默认值
-     - info
-   * - 参数说明
-     - 指定日志等级
-     
-用例
+Use Case
 +++++++++
 .. Note:: 
-    测试项目：SpringDemo
+    Demo Sample: SpringDemo
 
-- 当需要将应用绑定到云端项目 SpringDemo 时：
+- Setting up the SpringDemo application to DongTai IAST with the following line:
     
 .. code-block:: bash
     
-    java -javaagent:/path/to/agent.jar -Ddongtai.app.name=SpringDemo -jar SpringDemo.jar
+    java -javaagent:/path/to/agent.jar -Dproject.name=SpringDemo -jar SpringDemo.jar
 
-- 当需要排查 Agent 报错问题或者二次开发 Agent 时需要本地调试：
+- Non-first time setting up the application/Troubleshooting the agent error message with the following line:
 
 .. code-block:: bash
 
-    java -javaagent:/path/to/agent.jar -Ddongtai.debug=true -jar SpringDemo.jar
+    java -javaagent:/path/to/agent.jar -Ddebug.name=true -jar SpringDemo.jar
 
-- 当启动 Agent 影响了应用的运行，需要设置 Agent 延迟启动时间，以 15 秒为例：
+- Automatic (Delayed Start) DongTai IAST agent with the following line (demo sample: 15 sec):
 
 .. code-block:: bash
 
     java -javaagent:/path/to/agent.jar -Diast.engine.delay.time=15 -jar SpringDemo.jar
 
-- 当排查 agent 异常或者研究字节码转换原理时，在目录 ``/tmp/class`` 查看转换后的字节码文件：
+- Enable to check or troubleshooting the dump file in folder ``/tmp/class`` with the following line:
 
 .. code-block:: bash
 
     java -javaagent:/path/to/agent.jar -Diast.dump.class.enable=true -Diast.dump.class.path=/tmp/class -jar SpringDemo.jar
 
-- 当前网络无法访问洞态云端需要设置HTTP代理，以设置代理 10.100.100.1:80 为例：
+- Enable HTTP proxy for network access with the following line (demo sample: proxy server address 10.100.100.1:80):
 
 .. code-block:: bash
 
     java -javaagent:/path/to/agent.jar -Diast.proxy.enable=true -Diast.proxy.host=10.100.100.1 -Diast.proxy.host=80 -jar SpringDemo.jar
 
-- 当需要设置检测能力为 hunter/normal 时（hunter 模式的使用场景：代码审计，normal 模式使用场景：企业内部检测漏洞）：
+- Switch the security scanning mode between hunter mode and normal mode with the following line (Hunter mode is suggested for code review and normal mode is suggested for enterprise vulnerabilities detection):
 
 .. code-block:: bash
 
