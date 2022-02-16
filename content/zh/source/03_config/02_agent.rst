@@ -3,7 +3,7 @@ Agent 配置
 参数表
 +++++++++++++++++
 
-- **dongtai.app.name**
+- **debug**
 
 .. list-table::
    :widths: 4 20
@@ -13,73 +13,7 @@ Agent 配置
    * - 属性
      - 值
    * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.name=<application name>`` 
-   * - 参数类型
-     - String
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 格式：中文、英文字母大小写、数字、@等组合，长度20以内，名称保证唯一
-   * - 默认值
-     - Demo Project
-   * - 参数说明
-     - 项目名称
-
-- **dongtai.app.create**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-   
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.create=<true or false>`` 
-   * - 参数类型
-     - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - ``true`` ｜ ``false``
-   * - 默认值
-     - false
-   * - 参数说明
-     - 是否在管理服务器上自动创建项目
-
-- **dongtai.app.version**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.app.version=<v1.1.0>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 应用版本号
-   * - 默认值
-     - v1.0
-   * - 参数说明
-     - 当配置该参数启动时，会自动创建项目及版本
-     
-- **dongtai.debug**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.debug=<true or false>`` 
+     - 启动时添加 ``-Ddebug=<true or false>`` 
    * - 参数类型
      - Boolean
    * - 来源
@@ -90,6 +24,28 @@ Agent 配置
      - false
    * - 参数说明
      - 开启后检测本地临时目录中是否存在核心检测引擎存在，加载本地检测引擎并启动
+
+- **project.name**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Dproject.name=<application name>`` 
+   * - 参数类型
+     - String
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - 格式：中文、英文字母大小写、数字、@等组合，长度20以内，名称保证唯一
+   * - 默认值
+     - Demo Project
+   * - 参数说明
+     - 项目名称
 
 - **iast.mode**
 
@@ -201,6 +157,50 @@ Agent 配置
    * - 参数说明
      - HTTP 代理的端口
 
+- **iast.service.report.interval**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Diast.service.report.interval=<60000>`` 
+   * - 参数类型
+     - 整型数字
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - 任意整型数字
+   * - 默认值
+     - 60000
+   * - 参数说明
+     - 发送报告的间隔时间，单位：毫秒
+
+- **iast.service.relay.interval**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Diast.service.replay.interval=<300000>`` 
+   * - 参数类型
+     - 整型数字
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - 任意整型数字
+   * - 默认值
+     - 30000
+   * - 参数说明
+     - 发送报告的间隔时间，单位：毫秒
+
 - **iast.engine.delay.time**
 
 .. list-table::
@@ -219,7 +219,7 @@ Agent 配置
    * - 可选参数
      - 任意整型数字
    * - 默认值
-     - 0
+     - 10
    * - 参数说明
      - 延迟启动功能，单位：秒
 
@@ -311,6 +311,50 @@ Agent 配置
    * - 参数说明
      - 开启全量HOOK模式
 
+- **project.create**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+   
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Dproject.create=<true or false>`` 
+   * - 参数类型
+     - Boolean
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - ``true`` ｜ ``false``
+   * - 默认值
+     - false
+   * - 参数说明
+     - 是否在管理服务器上自动创建项目
+
+- **project.version**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Dproject.version=<v1.1.0>`` 
+   * - 参数类型
+     - 字符串
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - 应用版本号
+   * - 默认值
+     - v1.0
+   * - 参数说明
+     - 当配置该参数启动时，会自动创建项目及版本
+
 - **response.length**
 
 .. list-table::
@@ -332,73 +376,7 @@ Agent 配置
      - 无
    * - 参数说明
      - 当配置该参数启动时，会改变 agent 获取应用的 http 请求响应体的长度
-     
-- **dongtai.log**
 
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log=<true or false>`` 
-   * - 参数类型
-     - Boolean
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - ``true`` ｜ ``false``
-   * - 默认值
-     - true
-   * - 参数说明
-     - 是否把日志输出到本地文件
-
-- **dongtai.log.path**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log.path=/tmp`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - 任意有读写权限的目录
-   * - 默认值
-     - agent.jar 当前目录
-   * - 参数说明
-     - 指定日志文件所在目录
-     
-- **dongtai.log.level**
-
-.. list-table::
-   :widths: 4 20
-   :header-rows: 1
-   :width: 100%
-
-   * - 属性
-     - 值
-   * - 生效方式
-     - 启动时添加 ``-Ddongtai.log.level=<1000>`` 
-   * - 参数类型
-     - 字符串
-   * - 来源
-     - 配置文件
-   * - 可选参数
-     - info,debug
-   * - 默认值
-     - info
-   * - 参数说明
-     - 指定日志等级
-     
 用例
 +++++++++
 .. Note:: 
@@ -408,13 +386,13 @@ Agent 配置
     
 .. code-block:: bash
     
-    java -javaagent:/path/to/agent.jar -Ddongtai.app.name=SpringDemo -jar SpringDemo.jar
+    java -javaagent:/path/to/agent.jar -Dproject.name=SpringDemo -jar SpringDemo.jar
 
 - 当需要排查 Agent 报错问题或者二次开发 Agent 时需要本地调试：
 
 .. code-block:: bash
 
-    java -javaagent:/path/to/agent.jar -Ddongtai.debug=true -jar SpringDemo.jar
+    java -javaagent:/path/to/agent.jar -Ddebug.name=true -jar SpringDemo.jar
 
 - 当启动 Agent 影响了应用的运行，需要设置 Agent 延迟启动时间，以 15 秒为例：
 
