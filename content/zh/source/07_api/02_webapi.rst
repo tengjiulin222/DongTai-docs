@@ -1453,56 +1453,98 @@ DongTai-WebAPI 用于处理DongTai用户资源管理的相关请求，包括：
 
 .. code:: json
 
-    {
-        "status": 201,
-        "msg": "success",
-        "data": {
-            "vul": {
-                "url": "http://localhost:8080/vulns/009-deserialize.jsp",
-                "uri": "/vulns/009-deserialize.jsp",
-                "agent_name": "Linux-fv-az129-986-v1.0.6-java.action.github.com",
-                "http_method": "GET",
-                "type": "不安全的hash算法",
-                "taint_position": null,
-                "first_time": 1635310288,
-                "latest_time": 1635479684,
-                "project_name": "openrasp-vulns",
-                "project_version": "V1.0",
-                "language": "JAVA",
-                "level": "低危",
-                "level_type": 3,
-                "counts": 3,
-                "req_header": "GET /vulns/009-deserialize.jsp?id=whoami HTTP/1.1\nhost:localhost:8080\nuser-agent:curl/7.68.0\naccept:*/*\n",
-                "response": "\n\n",
-                "graph": null,
-                "context_path": "openrasp-vulns",
-                "client_ip": "127.0.0.1",
-                "status": "待验证",
-                "taint_value": null,
-                "param_name": {},
-                "method_pool_id": null,
-                "project_id": 121
-            },
-            "server": {
-                "name": "server.name",
-                "hostname": "fv-az129-986",
-                "ip": "localhost",
-                "port": 8080,
-                "container": "Tomcat/8.x",
-                "server_type": "tomcat",
-                "container_path": "/home/runner/work/DongTai-agent-java/apache-tomcat-8.5.40",
-                "runtime": "OpenJDK Runtime Environment",
-                "environment": "java.vendor=Azul Systems, Inc., sun.java.launcher=SUN_STANDARD, catalina.base=/home/runner/work/DongTai-agent-java/apache-tomcat-8.5.40, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, catalina.useNaming=true, os.name=Linux, sun.boot.class.path=/",
-                "command": "org.apache.catalina.startup.Bootstrap start"
-            },
-            "strategy": {
-                "desc": "",
-                "sample_code": "",
-                "repair_suggestion": ""
-            }
-        }
-    }
-
+{
+	"status": 201,
+	"msg": "success",
+	"data": {
+		"vul": {
+			"url": "http://localhost:9999/sqli1",
+			"uri": "/sqli1",
+			"agent_name": "windows-DESKTOP-JLVFSOV-0.1.0-c7brhqqjdt4g5q2i0kk0",
+			"http_method": "GET",
+			"type": "SQL\u6ce8\u5165",
+			"taint_position": "",
+			"first_time": 1641527550,
+			"latest_time": 1644403924,
+			"project_name": "GO Project",
+			"project_version": "V1.0",
+			"language": "GO",
+			"level": "\u9ad8\u5371",
+			"level_type": 1,
+			"counts": 59,
+			"req_header": "GET /sqli1 HTTP/1.1\nCookie: Uid=1; Level=low; govwa=MTY0MTg3MjcwMnxEdi1CQkFFQ180SUFBUkFCRUFBQVh2LUNBQU1HYzNSeWFXNW5EQThBRFdkdmRuZGhYM05sYzNOcGIyNEVZbTl2YkFJQ0FBRUdjM1J5YVc1bkRBY0FCWFZ1WVcxbEJuTjBjbWx1Wnd3SEFBVmhaRzFwYmdaemRISnBibWNNQkFBQ2FXUUdjM1J5YVc1bkRBTUFBVEU9fCTQNkVgywBOf3ioUFL2g9CfQecKhBDeznes-kFtr_J9\nUpgrade-Insecure-Requests: 1\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\nSec-Fetch-Mode: navigate\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\nConnection: keep-alive\nSec-Ch-Ua: \" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"97\", \"Chromium\";v=\"97\"\nSec-Fetch-Site: same-origin\nSec-Fetch-User: ?1\nSec-Fetch-Dest: document\nSec-Ch-Ua-Mobile: ?0\nAccept-Encoding: gzip, deflate, br\nSec-Ch-Ua-Platform: \"Windows\"\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36\nReferer: http://localhost:9999/index\n",
+			"response": "{}\n\n \n&lt;!DOCTYPE html>\n&lt;html>\n&lt;head>\n    &lt;title>Sql Injection&lt;/title>\n\n    &lt;link href=\"public/css/font-awesome-4.7.0/css/font-awesome.css\" rel=\"stylesheet\">\n\n    \n    &lt;link rel=\"stylesheet\" type=\"text/css\" href=\"public/css/open-sans.css\" />\n    &lt;link href=\"public/css/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">\n    \n    &lt;script type=\"text/javascript\" src=\"public/js/jquery-3.2.1-min.js\">&lt;/script>\n    &lt;script type=\"text/javascript\" src=\"public/js/bootstrap.min.js\">&lt;/script>\n    \n    &lt;link href=\"public/css/main.css\" rel=\"stylesheet\">\n\n    &lt;style>\n        .header {\n    background-image: url(\"public/img/header2.png\");\n    width: 1140px;\n    height: 130px;\n    margin-bottom: 20px;\n}\n    &lt;/style>\n&lt;/head>\n&lt;body>\n    &lt;div class=\"container\">\n        &lt;nav class=\"header\" role=\"navigation\">\n        &lt;/nav>\n         \n&lt;div class=\"row\">\n    &lt;div class=\"col-sm-4 col-md-3 sidebar\">\n        &lt;div class=\"nav-side-menu\">\n            &lt;div class=\"brand\">&lt;img src=\"public/img/go-icon.ico\">Vulnerabilities&lt;/div>\n            &lt;i class=\"fa fa-bars fa-2x toggle-btn\" data-toggle=\"collapse\" data-target=\"#menu-content\">&lt;/i>\n\n            &lt;div class=\"menu-list\">\n\n                &lt;ul id=\"menu-content\" class=\"menu-content collapse out\">\n                    &lt;li>\n                        &lt;a href=\"index\">\n                            &lt;i class=\"fa fa-dashboard fa-lg\">&lt;/i> Home\n                        &lt;/a>\n                    &lt;/li>\n\n                    &lt;li>\n                            &lt;a href=\"setup\">\n                                &lt;i class=\"glyphicon glyphicon-cog fa-lg\">&lt;/i> Setup/Reset\n                            &lt;/a>\n                    &lt;/li>\n                    &lt;li style=\"height:35px\">&lt;/li>\n                    &lt;li data-toggle=\"collapse\" data-target=\"#sqli\" class=\"collapsed\">\n                        &lt;a href=\"#\">&lt;i class=\"fa fa-bug fa-lg\">&lt;/i> SQL Injection &lt;span class=\"arrow\">&lt;/span>&lt;/a>\n                    &lt;/li>\n                    &lt;ul class=\"sub-menu collapse\" id=\"sqli\">\n                        &lt;li>&lt;a href=\"sqli1\">SQLI 1&lt;/a>&lt;/li>\n                        &lt;li>&lt;a href=\"sqli2?uid=1\">SQLI 2&lt;/a>&lt;/li>\n                    &lt;/ul>\n\n\n                    &lt;li data-toggle=\"collapse\" data-target=\"#xss\" class=\"collapsed\">\n                        &lt;a href=\"#\">&lt;i class=\"fa fa-bug fa-lg\">&lt;/i> Cross Site Scripting &lt;span class=\"arrow\">&lt;/span>&lt;/a>\n                    &lt;/li>\n                    &lt;ul class=\"sub-menu collapse\" id=\"xss\">\n                        &lt;li>&lt;a href=\"xss1\">XSS 1&lt;/a>&lt;/li>\n                        &lt;li>&lt;a href=\"xss2?uid=1\">XSS 2&lt;/a>&lt;/li>\n                    &lt;/ul>\n\n                    &lt;li data-toggle=\"collapse\" data-target=\"#idor\" class=\"collapsed\">\n                            &lt;a href=\"#\">&lt;i class=\"fa fa-bug fa-lg\">&lt;/i> IDOR &lt;span class=\"arrow\">&lt;/span>&lt;/a>\n                        &lt;/li>\n                        &lt;ul class=\"sub-menu collapse\" id=\"idor\">\n                            &lt;li>&lt;a href=\"idor1\">IDOR 1&lt;/a>&lt;/li>\n                            &lt;li>&lt;a href=\"idor2\">IDOR 2&lt;/a>&lt;/li>\n                        &lt;/ul>\n\n                   \n                    &lt;li>\n                            &lt;a href=\"csa\">\n                                &lt;i class=\"fa fa-bug fa-lg\">&lt;/i> Client Side Auth\n                            &lt;/a>\n                        &lt;/li>\n                    &lt;li style=\"height:35px\">\n                    &lt;/li>\n                    &lt;li>\n                            &lt;a href=\"setting\">\n                                &lt;i class=\"glyphicon glyphicon-cog fa-lg\">&lt;/i> Setting\n                            &lt;/a>\n                        &lt;/li>\n                    &lt;li>\n                            &lt;a href=\"logout\">\n                                &lt;i class=\"fa fa-sign-out fa-lg\">&lt;/i> Logout\n                            &lt;/a>\n                        &lt;/li>\n                        \n                &lt;/ul>\n            &lt;/div>\n        &lt;/div>\n    &lt;/div>\n    \n&lt;div class=\"col-md-9\">\n    &lt;div class=\"panel panel-primary\">\n        &lt;div class=\"panel-heading\">SQL Injection Vulnerability&lt;/div>\n        &lt;div class=\"panel-body\">\n            &lt;div class=\"pnl\">\n                \n                &lt;p>This should be safe&lt;/p>\n                &lt;p>Your Profile :&lt;/p>\n                    sql: converting argument $1 type: unsupported type []interface {}, a slice of interface \n&lt;pre>\nUid     : 1\nName    : \nCity    :  \nNumber  :  \n&lt;/pre>\n                &lt;div class=\"more-info\">\n                    &lt;span>More Info :&lt;/span>\n                    &lt;a target=\"_blank\" href=\"http://www.sqlinjection.net/union/\">http://www.sqlinjection.net/union/&lt;/a>\n                    &lt;a target=\"_blank\" href=\"https://www.owasp.org/index.php/SQL_Injection\">https://www.owasp.org/index.php/SQL_Injection&lt;/a>\n                &lt;/div>\n            &lt;/div>\n        &lt;/div>\n    &lt;/div>\n&lt;/div>\n\n&lt;/div>\n\n\n    &lt;footer class=\"footer\">\n        &lt;div class=\"container\">\n          &lt;span>&lt;i class=\"fa fa-copyright\">&lt;/i>Nemosecurity&lt;/span>\n        &lt;/div>\n      &lt;/footer>\n&lt;/div>\n\n&lt;/body>\n\n&lt;/html>\n ",
+			"graph": [{
+				"type": "\u6c61\u70b9\u6765\u6e90\u65b9\u6cd5",
+				"file": "github.com/govwa/util",
+				"caller": "github.com/govwa/util.GetCookie(0xc000426e00, {0xa8b309, 0x3})\n()",
+				"line_number": 48,
+				"class": "(*Request)",
+				"method": "Cookie",
+				"source": "11055881",
+				"source_value": "Uid ",
+				"target": "824634230464, 824634230468, 0, 0, 0, 0",
+				"target_value": "Uid 1     ",
+				"node": "(*Request).Cookie()",
+				"tag": "source",
+				"code": "<em>Uid 1     </em> = github.com/HXSecurity/DongTai-agent-go/core/http/httpRequestCookie.Cookie(0xc000426e00, {0xa8b309, 0x3})\n(...)"
+			}, {
+				"type": "\u4f20\u64ad\u65b9\u6cd5",
+				"file": "github.com/govwa/vulnerability/sqli.(*Profile)",
+				"caller": "github.com/govwa/vulnerability/sqli.(*Profile).UnsafeQueryGetData(0xc000527bc0, {0xc00007c6c4, 0x1})\n()",
+				"line_number": 36,
+				"class": "fmt",
+				"method": "Sprintf",
+				"source": "11220318, 824634230468",
+				"source_value": "SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s 1 ",
+				"target": "824634687920",
+				"target_value": "SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=1 ",
+				"node": "fmt.Sprintf()",
+				"tag": "propagator",
+				"code": "<em>SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=1 </em> = github.com/HXSecurity/DongTai-agent-go/core/base/fmtSprintf.Sprintf({0xab355e, 0x90}, {0xc0002b50f0, 0x1, 0x1})\n(..., <em>SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s 1 </em>, ...)"
+			}, {
+				"type": "\u5371\u9669\u65b9\u6cd5",
+				"file": "github.com/govwa/vulnerability/sqli.(*Profile)",
+				"caller": "github.com/govwa/vulnerability/sqli.(*Profile).UnsafeQueryGetData(0xc000527bc0, {0xc00007c6c4, 0x1})\n()",
+				"line_number": 40,
+				"class": "(*DB)",
+				"method": "Query",
+				"source": "824634687920",
+				"source_value": "SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=1 ",
+				"target": "",
+				"target_value": "",
+				"node": "(*DB).Query()",
+				"tag": "sink",
+				"code": "github.com/HXSecurity/DongTai-agent-go/core/base/sqlDBQuery.Query(0xc00020e680, {0xc0000ec1b0, 0x8f}, {0x0, 0x0, 0x0})\n(..., <em>SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=1 </em>, ...)"
+			}],
+			"context_path": "",
+			"client_ip": "[::1]:62431",
+			"status": "\u5f85\u9a8c\u8bc1",
+			"taint_value": "SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=1 ",
+			"param_name": {},
+			"method_pool_id": 466892,
+			"project_id": 367,
+			"is_need_http_detail": true
+		},
+		"server": {
+			"name": "server.name",
+			"hostname": "DESKTOP-JLVFSOV",
+			"ip": "192.168.2.161",
+			"port": 9999,
+			"container": "JavaApplication",
+			"server_type": "",
+			"container_path": "C:\\Users\\jjz\\AppData\\Local\\Temp\\GoLand\\",
+			"runtime": "",
+			"environment": "\"\":\"::=::\\\\\",\"ALLUSERSPROFILE\":\"C:\\\\ProgramData\",\"APPDATA\":\"C:\\\\Users\\\\jjz\\\\AppData\\\\Roaming\",\"CATALINA_BASE\":\"D:\\\\Program Files\\\\apache-tomcat-8.5.70\",\"CATALINA_HOME\":\"D:\\\\Program Files\\\\apache-tomcat-8.5.70\",\"CGO_CFLAGS\":\"-O0 -g\",\"CLASSPATH\":\".;D:\\\\Prog",
+			"command": ""
+		},
+		"strategy": {
+			"desc": "\u8f6f\u4ef6\u4f7f\u7528\u6765\u81ea\u4e0a\u6e38\u7ec4\u4ef6\u7684\u5916\u90e8\u5f71\u54cd\u7684\u8f93\u5165\u6765\u6784\u9020\u5168\u90e8\u6216\u90e8\u5206SQL\u547d\u4ee4\uff0c\u4f46\u4e0d\u4f1a\u4e2d\u548c\u6216\u4e0d\u6b63\u786e\u5730\u4e2d\u548c\u4e86\u7279\u6b8a\u5143\u7d20\uff0c\u8fd9\u4e9b\u7279\u6b8a\u5143\u7d20\u5728\u5c06\u5176\u53d1\u9001\u5230\u4e0b\u6e38\u7ec4\u4ef6\u65f6\u53ef\u80fd\u4f1a\u4fee\u6539\u9884\u671f\u7684SQL\u547d\u4ee4\u3002",
+			"sample_code": "",
+			"repair_suggestion": "\u9632\u8303SQL\u6ce8\u5165\uff0c\u6807\u51c6\u65b9\u6848\u4e3a\u8f93\u5165\u9a8c\u8bc1\u4e0e\u53c2\u6570\u5316\u67e5\u8be2\u76f8\u7ed3\u5408\u3002\n\u8f93\u5165\u9a8c\u8bc1\u5206\u4e3a\u767d\u540d\u5355\u548c\u9ed1\u540d\u5355\u4e24\u79cd\u65b9\u5f0f\uff0c\u901a\u5e38\u5728\u7cfb\u7edf\u4e2d\u662f\u7ed3\u5408\u5230\u4e00\u8d77\u6765\u5b8c\u6210\u8f93\u5165\u9a8c\u8bc1\uff0c\u5177\u4f53\u5b9e\u73b0\u901a\u8fc7\u6b63\u5219\u8868\u8fbe\u5f0f\u6765\u5b8c\u6210\u3002\u9700\u8981\u6ce8\u610f\u4ee5\u4e0b\u51e0\u65b9\u9762\uff1a\n(1) \u5728\u53ef\u4fe1\u7cfb\u7edf\uff08\u6bd4\u5982\uff1a\u670d\u52a1\u5668\uff09\u4e0a\u6267\u884c\u6240\u6709\u7684\u6570\u636e\u9a8c\u8bc1\u3002\n(2) \u9a8c\u8bc1\u6240\u6709\u6765\u81ea\u4e0d\u53ef\u4fe1\u6570\u636e\u6e90\uff08\u6bd4\u5982\uff1a\u6570\u636e\u5e93\uff0c\u6587\u4ef6\u6d41\uff0c\u7b49\uff09\u7684\u6570\u636e\u3002\n(3) \u5e94\u5f53\u4e3a\u5e94\u7528\u7a0b\u5e8f\u5e94\u63d0\u4f9b\u4e00\u4e2a\u96c6\u4e2d\u7684\u8f93\u5165\u9a8c\u8bc1\u673a\u5236\u548c\u89c4\u5219\u3002\n(4) \u4e3a\u6240\u6709\u8f93\u5165\u660e\u786e\u6070\u5f53\u7684\u5b57\u7b26\u96c6\uff0c\u6bd4\u5982\uff1aUTF-8\u3002\u5728\u8f93\u5165\u9a8c\u8bc1\u524d\uff0c\u5c06\u6570\u636e\u6309\u7167\u5e38\u7528\u5b57\u7b26\u8fdb\u884c\u7f16\u7801\uff08\u89c4\u8303\u5316\uff09\u3002\u5982\u679c\u8fdb\u884c\u5173\u952e\u5b57\u7684\u9a8c\u8bc1\uff0c\u8bf7\u5148\u7edf\u4e00\u5927\u5c0f\u5199\u3002\n(5) \u9a8c\u8bc1\u7684\u4e0d\u4ec5\u662f\u53c2\u6570\uff0c\u5305\u542b\u6240\u6709\u6765\u81ea\u5ba2\u6237\u7aef\u7684\u6570\u636e\uff0c\u5305\u62ec\uff1a\u6240\u6709\u53c2\u6570\u3001URL\u3001HTTP\u5934\u4fe1\u606f\uff08\u6bd4\u5982\uff1acookie\u540d\u5b57\u548c\u6570\u636e\u503c\uff09\u3002\n(6) \u9a8c\u8bc1\u6b63\u786e\u7684\u6570\u636e\u7c7b\u578b\u3001\u9a8c\u8bc1\u6570\u636e\u8303\u56f4\u3001\u9a8c\u8bc1\u6570\u636e\u957f\u5ea6\u3002\n(7) \u8bf7\u8003\u8651\u662f\u5426\u5141\u8bb8\u8f93\u5165\u5e38\u89c1\u5371\u9669\u5b57\u7b26\u3002\u90e8\u5206\u5e38\u89c1\u7684\u5371\u9669\u5b57\u7b26\u5305\u62ec\uff1a< > \"\" ' % ( ) & +  ' \"\" \u3002\n(8) \u7279\u6b8a\u5b57\u7b26\u5355\u72ec\u9a8c\u8bc1\uff1a\u7a7a\u5b57\u8282 (%00)\uff1b\u6362\u884c\u7b26 (%0d, %0a, \n, \n)\uff1b\u8def\u5f84\u66ff\u4ee3\u5b57\u7b26\u201c\u70b9-\u70b9-\u659c\u6760\u201d\uff08../\u6216 ..\uff09\u3002\u9a8c\u8bc1\u66ff\u4ee3\u5b57\u7b26\uff1a %c0%ae%c0%ae/ (\u4f7f\u7528\u89c4\u8303\u5316 \u9a8c\u8bc1\u53cc\u7f16\u7801\u6216\u5176\u4ed6\u7c7b\u578b\u7684\u7f16\u7801\u653b\u51fb)\u3002\n\u53c2\u8003\u4ee3\u7801\uff1a\n(1) \u4f7f\u7528\u7279\u6b8a\u5b57\u7b26\u8fc7\u6ee4\u7a0b\u5e8f\u9632\u62a4SQL\u6ce8\u5165\u653b\u51fb\uff1a\n\u4ee3\u7801\u529f\u80fd\uff1a\u5bf9HTTP\u8bf7\u6c42\u4e2d\u7684\u6240\u6709\u53c2\u6570\u8fdb\u884c\u5371\u9669\u5b57\u7b26\u8fc7\u6ee4\uff0c\u53d1\u73b0\u5371\u9669\u5b57\u7b26\u53ef\u8df3\u8f6c\u5230\u76f8\u5e94\u7684\u9519\u8bef\u9875\u9762\u3002\n```java\npublic void doFilter(ServletRequest args0,\nServletResponse args1,FilterChain chain)\nthrows IOException, ServletException {\nHttpServletRequest req=(HttpServletRequest)args0;\nHttpServletResponse res=(HttpServletResponse)args1;\n//\u83b7\u5f97\u6240\u6709\u8bf7\u6c42\u53c2\u6570\u540d\nEnumeration params = req.getParameterNames();\nString sql = \"\"\"\";\nwhile (params.hasMoreElements()) {\n//\u5f97\u5230\u53c2\u6570\u540d\nString name = params.nextElement().toString();\n//\u5f97\u5230\u53c2\u6570\u5bf9\u5e94\u503c\nString[] value = req.getParameterValues(name);\nfor (int i = 0; i < value.length; i++) {\nsql = sql + value[i];\n}\n}\n//\u6709sql\u6ce8\u5165\u548cXSS\u5371\u9669\u5b57\u7b26\nif (sqlValidate(sql)) {\nthrow new IOException(\"\"\u8bf7\u6c42\u6709\u975e\u6cd5\u5b57\u7b26\uff1a\"\"+sql);\n} else {\nchain.doFilter(args0,args1);\n}\n}\nprotected static boolean sqlValidate(String str) {\nstr = str.toLowerCase(); //\u7edf\u4e00\u8f6c\u4e3a\u5c0f\u5199\nString badStr = \"\"and|exec|insert|select|delete\n|update|count|union|master|truncate|char|declare\n|cast|set|fetch|varchar|sysobjects|drop\n|`|'|\"\"|<|>|(|)|/||=|+|-|#|*|;|%\"\";\nString[] badStrs = badStr.split(\"\"|\"\");\nfor (int i = 0; i < badStrs.length; i++) {\nif (str.indexOf(badStrs[i]) >= 0) {\nreturn true; //\u53c2\u6570\u4e2d\u5305\u542b\u8981\u8fc7\u6ee4\u5173\u952e\u5b57;\n}\n}\nreturn false; //\u53c2\u6570\u4e2d\u4e0d\u5305\u542b\u8981\u8fc7\u6ee4\u5173\u952e\u5b57;\n}\n```\n(2) \u901a\u8fc7\u53c2\u6570\u5316\u67e5\u8be2\u65b9\u5f0f\u8fdb\u884cSQL\u6ce8\u5165\u653b\u51fb\u9632\u62a4\uff1a\n```java\nString sql = \u201cselect * from product where cat=\u2019?\u2019 and price >\u2019?\u2019\u201d;\nPreparedStatement pstmt = con.prepareStatement(sql);\npstmt.setInt(1, request.getParameter(\u201ccat\u201d));\npstmt.setString(2, request.getParameter(\u201cprice\u201d));\nResultSet rs = pstmt.executeQuery();\n```\n(3) \u4f7f\u7528MyBatis\u6280\u672f\uff0c\u901a\u8fc7Mapper.xml\u6587\u4ef6\u5b9a\u4e49SQL\u8bed\u53e5\u8fdb\u884cSQL\u6ce8\u5165\u653b\u51fb\u9632\u62a4\uff1a\n```\n<mapper namespace=\"TestUser\"> //\u547d\u540d\u7a7a\u95f4\n<select id=\"getById\" parameterType=\"java.lang.String\"\nresultMap=\"TestFlowResult\">\nselect\n<include refid=\"TestFlowColumns\" />\n```\n\u5728\u7f16\u5199mybatis\u7684\u6620\u5c04\u8bed\u53e5\u65f6\uff0c\u5c3d\u91cf\u91c7\u7528\u201c#{xxx}\u201d\u8fd9\u6837\u7684\u683c\u5f0f\u3002\u82e5\u4e0d\u5f97\u4e0d\u4f7f\u7528\u201cNULL\u201d\u8fd9\u6837\u7684\u53c2\u6570\uff0c\u8981\u624b\u5de5\u5730\u505a\u597d\u8fc7\u6ee4\u5de5\u4f5c\uff0c\u6765\u9632\u6b62sql\u6ce8\u5165\u653b\u51fb\u3002\n(4) \u5f3a\u7c7b\u578b\u7684\u53c2\u6570\u5316\u67e5\u8be2\uff0c\u5373\u5728\u6570\u636e\u5e93\u589e\u52a0\u3001\u67e5\u8be2\u3001\u66f4\u65b0\u64cd\u4f5c\u65f6\uff0csql\u8bed\u53e5\u4e2d\u6240\u6709\u8f93\u5165\u53c2\u6570\u7edf\u4e00\u91c7\u7528#param#\u65b9\u5f0f\u3002\u793a\u4f8b\u5982\u4e0b:\n<update id=\"\"updatePtaskDetailState\"\" parameterClass=\"\"java.lang.String\"\">\nupdate ZX_PTASKDETAIL set BATCHJNLNOSTATE = '4' where JNLNO = #jnlNo#\n}\n(5)\u9700\u8981\u4f7f\u7528like\u8bed\u53e5\u7684\u5730\u65b9\u53ef\u4ee5\u4f7f\u7528'%'||#param#||'%'\u6216concat(concat('%',#param#),'%')\u907f\u514d\u6ce8\u5165\u3002\u793a\u4f8b\u5982\u4e0b\nselect * from ZX_PCIF where name like '%'||#name#||'%'"
+		}
+	}
+}
 **返回结果** Json Object
 
 +----------+-----------------------+--------+------------+------------+--------+--------+
@@ -1558,6 +1600,39 @@ DongTai-WebAPI 用于处理DongTai用户资源管理的相关请求，包括：
 +-------------------+--------+--------+------------+------------+--------+--------+
 | command           |        | 是     | [string]   |            |        |        |
 +-------------------+--------+--------+------------+------------+--------+--------+
+
++-------------------+--------+--------+------------+------------+--------+--------+
+| 参数名            | 说明   | 必填   | 类型       | 值可能性   | 限制   | 示例   |
++===================+========+========+============+============+========+========+
+| type              |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| file          |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| caller                |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| line\_number              |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| class         |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| method      |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| source   |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| source\_value           |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| target       |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| target\_value           |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| node           |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| tag           |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+| code           |        | 是     | [string]   |            |        |        |
++-------------------+--------+--------+------------+------------+--------+--------+
+
+
+
 
 \| 参数名 \| 说明 \| 必填 \| 类型 \| 值可能性 \| 限制 \| 示例 \| \|
 :------------ \| :------------ \| :------------ \| :------------ \|
