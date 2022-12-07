@@ -10,7 +10,7 @@ COPY . /opt
 
 RUN  make -C ./content/en/ html &&  make -C ./content/zh/ html
 
-FROM nginx
+FROM nginx:1.23.2
 
 COPY --from=builder /opt/content/en/build/html  /usr/share/nginx/html/dongtai-doc/en/
 COPY --from=builder /opt/content/zh/build/html  /usr/share/nginx/html/dongtai-doc/zh/
