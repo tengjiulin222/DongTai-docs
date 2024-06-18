@@ -4,3 +4,4 @@ sphinx-tabs
 sphinx-copybutton
 sphinx-intl
 recommonmark
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
